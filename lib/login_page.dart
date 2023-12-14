@@ -1,3 +1,4 @@
+import 'package:final_project/ItemListPage.dart';
 import 'package:final_project/about_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -29,6 +30,11 @@ class _LoginPageState extends State<LoginPage> {
         SnackBar(
           content: Text('Login success'),
         ),
+      );
+      Navigator.pushReplacement(
+        context,
+        //go to item list page
+        MaterialPageRoute(builder: (context) => ItemListPage()),
       );
     } else {
       // Incorrect credentials
